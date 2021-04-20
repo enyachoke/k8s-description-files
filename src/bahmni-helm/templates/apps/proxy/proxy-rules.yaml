@@ -58,7 +58,7 @@ data:
     ProxyPass /uploaded-files http://{{ .Release.Name }}-bahmni-filestore/uploaded-files
     ProxyPassReverse /uploaded-files http://{{ .Release.Name }}-bahmni-filestore/uploaded-files
     # Others
-    Redirect permanent  /home  /bahmni/home/
+    #Redirect permanent  /home  /bahmni/home/
 
     # Bahmni Reports
     ProxyPass /bahmni_config http://{{ .Release.Name }}-bahmni_config

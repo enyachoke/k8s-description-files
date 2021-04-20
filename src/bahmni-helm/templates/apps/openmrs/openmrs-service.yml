@@ -17,23 +17,4 @@ spec:
     protocol: TCP
     port: 8080
     targetPort: 8080
-  
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: {{ .Release.Name }}-openmrs
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /openmrs
-spec:
-  rules:
-  - http:
-      paths:
-      - path: /openmrs
-        pathType: Prefix
-        backend:
-          service:
-            name: {{ .Release.Name }}-openmrs
-            port:
-              number: 80
 {{ end }}{{ end }}{{ end }}

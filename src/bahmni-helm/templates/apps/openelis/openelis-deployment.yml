@@ -49,7 +49,6 @@ spec:
                 configMapKeyRef:
                   name: {{ .Release.Name }}-postgres-configs
                   key: POSTGRES_PASSWORD
-# Odoo Vars
             - name: OPENELIS_DB_NAME 
               valueFrom:
                 configMapKeyRef:
